@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>WUASystem</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>BoardFrontController</servlet-name>
+		<servlet-class>NET.WUA.BOARD.ACTION.BoardFrontController</servlet-class>
+	</servlet>
+
+  <servlet>
+		<servlet-name>MemberFrontController</servlet-name>
+		<servlet-class>NET.WUA.MEMBER.ACTION.MemberFrontController</servlet-class>
+  </servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>BoardFrontController</servlet-name>
+		<url-pattern>*.bo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>MemberFrontController</servlet-name>
+		<url-pattern>*.me</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+    	<servlet-name>ReservFrontController</servlet-name>
+    	<servlet-class>NET.WUA.RESERVATION.ACTION.ReservFrontController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    	<servlet-name>ReservFrontController</servlet-name>
+    	<url-pattern>*.re</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+		<servlet-name>SchFrontController</servlet-name>
+		<servlet-class>NET.WUA.SCHEDULE.ACTION.SchFrontController</servlet-class>
+  </servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>SchFrontController</servlet-name>
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminSchFrontController</servlet-name>
+		<servlet-class>NET.WUA.ADMIN.ACTION.AdminSchFrontController</servlet-class>
+  </servlet>
+  	
+	<servlet-mapping>
+		<servlet-name>AdminSchFrontController</servlet-name>
+		<url-pattern>*.fp</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+</web-app>
